@@ -1,0 +1,31 @@
+buildscript {
+    ext {
+        buildToolsVersion = "35.0.0"
+        minSdkVersion = 24
+        compileSdkVersion = 36
+        targetSdkVersion = 36
+        ndkVersion = "26.1.10909125"
+        kotlinVersion = "1.9.22"
+    }
+    repositories {
+        google()
+        mavenCentral()
+    }
+    dependencies {
+        classpath("com.android.tools.build:gradle:8.9.1")
+        classpath("com.facebook.react:react-native-gradle-plugin")
+        // 수정 포인트 1: 뒤에 :$kotlinVersion 을 꼭 붙여줘야 합니다.
+        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:2.0.21")
+    }
+}
+
+// 수정 포인트 2: 모든 프로젝트에서 메이븐 중앙 저장소를 뒤지게 설정 (AsyncStorage 에러 해결 핵심)
+allprojects {
+    repositories {
+        mavenCentral()
+        google()
+        maven { url 'https://www.jitpack.io' }
+    }
+}
+
+apply plugin: "com.facebook.react.rootproject"
