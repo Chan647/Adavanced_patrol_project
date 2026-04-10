@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>pt_pkg</name>
+  <version>0.0.1</version>
+  <description>
+    Patrol robot navigation package using A* global planner and Pure Pursuit local planner with Fire Detection.
+  </description>
+  <maintainer email="chan@example.com">chan</maintainer>
+  <maintainer email="junu5810@naver.com">ljw</maintainer>
+  <license>Apache-2.0</license>
+
+  <!-- Build tool -->
+  <buildtool_depend>ament_cmake</buildtool_depend>
+
+  <!-- Dependencies -->
+  <depend>rclcpp</depend>
+  <depend>geometry_msgs</depend>
+  <depend>nav_msgs</depend>
+  <depend>sensor_msgs</depend>
+  <depend>tf2</depend>
+  <depend>tf2_geometry_msgs</depend>
+  <depend>yaml-cpp</depend>
+  <depend>cv_bridge</depend>
+  <depend>opencv</depend>
+  <depend>std_msgs</depend>
+  <depend>turtlebot3_msgs</depend>
+
+  <!-- Export build type -->
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>

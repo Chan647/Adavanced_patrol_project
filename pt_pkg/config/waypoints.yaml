@@ -1,0 +1,17 @@
+waypoints:
+- label: START
+  x: 0.02
+  y: 0.05
+  yaw: 0.0
+- label: A-1
+  x: 2.84
+  y: 0.26
+  yaw: 0.0
+- label: A-2
+  x: 2.8
+  y: 2.15
+  yaw: 1.571
+- label: B-1
+  x: 0.07
+  y: 2.01
+  yaw: -3.101
